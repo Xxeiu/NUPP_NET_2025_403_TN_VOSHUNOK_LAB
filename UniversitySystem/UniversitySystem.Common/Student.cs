@@ -35,3 +35,29 @@ namespace UniversitySystem.Common
         }
     }
 }
+using System;
+using System.Collections.Generic; // Якщо ще не додано
+
+namespace UniversitySystem.Common
+{
+    public class Student : Person
+    {
+        // ... (існуючі властивості та конструктори)
+
+        // Статичний метод для створення нового об'єкта зі згенерованими даними (Завдання 2)
+        private static readonly Random Rnd = new Random();
+
+        public static Student CreateNew()
+        {
+            return new Student(
+                firstName: $"Student_FN_{Rnd.Next(1, 1000)}",
+                lastName: $"Student_LN_{Rnd.Next(1, 1000)}",
+                course: Rnd.Next(1, 6)
+            )
+            {
+                StudentId = $"S-{Guid.NewGuid().ToString().Substring(0, 4)}",
+                AverageGrade = Math.Round(Rnd.NextDouble() * 2 + 3, 2) // Оцінка від 3.00 до 5.00
+            };
+        }
+    }
+}
