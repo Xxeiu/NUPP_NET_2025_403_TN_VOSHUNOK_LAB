@@ -3,7 +3,7 @@ using System;
 namespace UniversitySystem.Common
 {
     // Похідний клас Professor, який наслідує Person. Друге наслідування (Завдання 1)
-    public class Professor : Person
+    public class Professor
     {
         // Статичне поле (Завдання 2)
         public static readonly string UniversityName; 
@@ -27,7 +27,7 @@ namespace UniversitySystem.Common
         }
 
         // Звичайний конструктор (Завдання 2)
-        public Professor(string firstName, string lastName) : base(firstName, lastName)
+        public Professor(string firstName, string lastName) 
         {
             Department = "General";
             ScientificDegree = "Candidate of Sciences";
