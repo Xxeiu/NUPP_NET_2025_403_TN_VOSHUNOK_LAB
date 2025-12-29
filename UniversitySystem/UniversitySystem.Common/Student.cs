@@ -3,7 +3,7 @@ using System;
 namespace UniversitySystem.Common
 {
     // Похідний клас Student, який наслідує Person. Виконання вимоги про наслідування (Завдання 1)
-    public class Student : Person
+    public class Student
     {
         // Властивість 1
         public string StudentId { get; set; }
@@ -23,7 +23,7 @@ namespace UniversitySystem.Common
 
         // Конструктор з параметрами (Завдання 2)
         public Student(string firstName, string lastName, int course) 
-            : base(firstName, lastName) // Виклик конструктора базового класу
+            
         {
             Course = course;
         }
