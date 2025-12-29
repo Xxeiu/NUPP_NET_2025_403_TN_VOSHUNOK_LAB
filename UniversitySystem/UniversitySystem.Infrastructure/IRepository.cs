@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace UniversitySystem.Infrastructure
 {
-    
+   
     public interface IRepository<T> where T : class
     {
         Task<T> GetByIdAsync(int id);
